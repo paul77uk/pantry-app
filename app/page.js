@@ -20,6 +20,19 @@ import {
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "white",
+  boxShadow: 24,
+  borderRadius: 1,
+  p: 4,
+  gap: 3,
+};
+
 export default function Home() {
   const [pantry, setPantry] = useState([]);
   const [filteredPantry, setFilteredPantry] = useState([]);
@@ -119,7 +132,7 @@ export default function Home() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box>
+        <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Add Item
           </Typography>
